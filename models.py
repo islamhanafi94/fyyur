@@ -132,6 +132,9 @@ class Artist(db.Model):
                 past_shows.append({
                     "artist_id": show.artist_id,
                     "artist_name": show.artist.name,
+                    "artist_image_link": show.artist.image_link,
+                    "venue_id": show.venue_id,
+                    "venue_name": show.venue.name,
                     "venue_image_link": show.venue.image_link,
                     "start_time": str(show.start_time)
                 })
@@ -146,6 +149,9 @@ class Artist(db.Model):
                     "artist_id": show.artist_id,
                     "artist_name": show.artist.name,
                     "artist_image_link": show.artist.image_link,
+                    "venue_id": show.venue_id,
+                    "venue_name": show.venue.name,
+                    "venue_image_link": show.venue.image_link,
                     "start_time": str(show.start_time)
                 })
         return upcoming_shows
